@@ -11,6 +11,7 @@ function drawrRectangulo() {
   const ctx = canvasRectangulo.getContext("2d");
   if (canvasRectangulo.getContext) {
 
+    ctx.fillStyle = "green";
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
     ctx.strokeRect(50, 50, 50, 50);
@@ -33,6 +34,7 @@ function drawFeather() {
   if (canvasFeather.getContext) {
     const ctx = canvasFeather.getContext("2d");
 
+    ctx.fillStyle = "blue";
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo externo
     ctx.moveTo(110, 75);
@@ -72,6 +74,7 @@ function drawlines() {
 function drawbow() {
   if (canvasbow.getContext) {
     const ctx = canvasbow.getContext("2d");
+    ctx.strokeStyle = "rgb(69, 243, 22)"; 
 
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
@@ -99,7 +102,7 @@ function drawBeizer() {
 
   if (canvasBeizer.getContext) {
     const ctx = canvasBeizer.getContext("2d");
-
+    ctx.strokeStyle = "rgb(22, 220, 243 )"; 
     // Ejemplo de curvas cuadráticas
     ctx.beginPath();
     ctx.moveTo(75, 25);
@@ -117,7 +120,7 @@ function drawBeizerC() {
 
   if (canvasBeizerC.getContext) {
     const ctx = canvasBeizerC.getContext("2d");
-
+    ctx.strokeStyle = "rgb(69, 243, 22)";
     // Ejemplo de curvas cúbicas
     ctx.beginPath();
     ctx.moveTo(75, 40);
@@ -135,7 +138,7 @@ function drawcombi() {
 
   if (canvascombi.getContext) {
     const ctx = canvascombi.getContext("2d");
-
+    ctx.strokeStyle = "rgb(69, 243, 22)";
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
     roundedRect(ctx, 53, 53, 49, 33, 10);
